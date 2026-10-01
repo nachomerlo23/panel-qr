@@ -2,6 +2,6 @@
   "name": "app-ro-preview",
   "private": true,
   "scripts": {
-    "build": "rm -rf dist && mkdir -p dist && cp app-ro/index.html dist/index.html"
+    "build": "node build.js"
   }
 }
