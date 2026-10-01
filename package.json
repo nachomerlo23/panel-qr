@@ -1,14 +1,7 @@
 {
-  "name": "panel-qr",
+  "name": "app-ro-preview",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "next": "14.1.0",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "build": "rm -rf dist && mkdir -p dist && cp app-ro/index.html dist/index.html"
   }
 }
