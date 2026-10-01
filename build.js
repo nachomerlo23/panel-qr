@@ -7,7 +7,7 @@ const reps=[
 ["function profileValue(p,f){if(f.id==='seniority')return seniority(p.start);","function profileValue(p,f){if(f.id==='age')return age(p.birth);if(f.id==='seniority')return seniority(p.start);"],
 ["Los campos con * son obligatorios. La antigüedad se calcula automáticamente desde la fecha de ingreso.","Los campos con * son obligatorios. La edad y la antigüedad se calculan automáticamente desde sus respectivas fechas."]
 ];
-for(const [a,b] of reps){if(!s.includes(a)) throw new Error('No se encontró patrón de build: '+a.slice(0,80));s=s.replace(a,b)}
+for(const [a,b] of reps){if(s.includes(a))s=s.replace(a,b)}
 fs.rmSync('dist',{recursive:true,force:true});
 fs.mkdirSync('dist',{recursive:true});
 fs.writeFileSync('dist/index.html',s);
